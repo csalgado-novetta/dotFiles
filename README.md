@@ -1,2 +1,5 @@
 # dotFiles
-host dotfile and configurations
+
+
+current dotfile configurations. 
+
