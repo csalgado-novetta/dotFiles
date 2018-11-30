@@ -40,15 +40,15 @@ nmap <F2> :NERDTreeToggle<CR>
 
 " js file beauty settings are in ~/.vim/.editorconfig
 " auto beautify on save
-autocmd BufWritePre *.js :call JsBeautify()
+"autocmd BufWritePre *.js :call JsBeautify()
 autocmd BufWritePre *.css :call CSSBeautify()
 autocmd BufWritePre *.html :call HtmlBeautify()
 autocmd BufWritePre *.json :call JsonBeautify()
 
 " ale competion on
-let g:ale_completion_enabled = 1
-"let g:ale_fix_on_save = 1
-"let b:ale_fixers = ['prettier', 'eslint']
+let g:ale_enabled = 0
+" let g:ale_completion_enabled = 1
+" let g:airline#extensions#ale#enabled =1
 
 "autocmd BufWritePost,FileWritePost *.go execute 'GoVet' | cwindow
 "autocmd BufWritePost,FileWritePost *.go execute 'GoLint' | cwindow

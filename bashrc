@@ -1,20 +1,36 @@
-# .bashrc
+# .bash_profile
 
-# Source global definitions
-if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+	. ~/.bashrc
 fi
 
-# Uncomment the following line if you don't like systemctl's auto-paging feature:
-# export SYSTEMD_PAGER=
+# User specific environment and startup programs
 
-# User specific aliases and functions
-export GOPATH=/home/csalgado/gocode
-export PATH=$PATH:$GOPATH/bin
-export PATH="/home/csalgado/bin/Sencha/Cmd:$PATH"
+export PATH=$PATH:$HOME/.local/bin:$HOME/bin:$HOME/gocode/src/github.com/Novetta/VideoEnterprise/bin:/opt/ffmpeg/bin                
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-export TERM=xterm-256color
-source .alias
+#if command -v tmux>/dev/null; then
+#    [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
+#fi
+
+
+# user specific aliases
+alias home='cd ~'
+alias root='cd /'
+alias c='clear'
+alias la='ls -a'
+alias nov='cd ~/gocode/src/github.com/Novetta'
+alias vid='cd ~/gocode/src/github.com/Novetta/VideoEnterprise'
+alias app='cd ~/gocode/src/github.com/Novetta/VideoEnterprise/videxweb/app'
+alias tmd='tmux detach'
+alias tma='tmux attach -t'
+alias tmns='tmux new -s'
+alias tmrs='tmus rename-session -t'
+alias tml='tmux ls'
+alias tm='tmux'
+alias tmks='tmux kill-session'
+
+# color modification
+export PS1='${debian_chroot:+($debian_chroot)}\[\e[0;92m\]\u\[\033[31m\]:\[\e[0;36m\]\w\[\033[31m\]\$ \[\e[0;96m\]'
+
+
